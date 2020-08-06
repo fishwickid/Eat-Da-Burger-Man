@@ -1,0 +1,23 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "App to help you devour burgers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishwickid/Eat-Da-Burger-Man.git"
+  },
+  "keywords": [
+    "burger"
+  ],
+  "author": "Chad Fishwick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fishwickid/Eat-Da-Burger-Man/issues"
+  },
+  "homepage": "https://github.com/fishwickid/Eat-Da-Burger-Man#readme"
+}
