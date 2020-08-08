@@ -1,22 +1,26 @@
-// Dependencies
-
-const routes = require("./controllers/burger.controller");
-const expressHandlebars = require("express-handlebars");
 const express = require("express");
-const path = require("path");
-
 const PORT = process.env.PORT || 8080;
+const app = express();
 
-const server = express();
+// Serve static content for the app from the "public" directory in the application directory
+app.use(express.static("public"));
 
-server.use(express.urlencoded({ extended: true }));
-server.use(express.json());
-server.use(express.static("public"));
-server.engine("handlebars", expressHandlebars({ defaultLayout: "main" }));
-server.set("view engine", "handlebars");
+// Parse application body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-server.use(routes);
+// Set handlebars
+const exphbs = require("express-handlebars");
 
-server.listen(PORT, function() {
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+// Import routes and give the serer access to them
+const routes = require("./controllers/burgerController");
+
+app.use(routes);
+
+// Start our server so that it can begin listening to client requests
+app.listen(PORT, () => {
     console.log("Server listening on: http://localhost:" + PORT);
 });
