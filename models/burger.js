@@ -1,3 +1,5 @@
+// Call ORM functions from the config folder
+
 const orm = require("../config/orm");
 
 var burger = {
@@ -8,7 +10,7 @@ var burger = {
     },
     create: function (newBurger, callback) {
         orm.insertOne("burgers", newBurger, function(result) {
-            callback(result):
+            callback(result);
         });
     },
     update: function (updateObject, conditionObject, callback) {

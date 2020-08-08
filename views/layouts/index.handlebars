@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 logo"> <img src="/assets/images/burger.png" alt="burger image">
+			<h2>Eat-Da-Burger!</h2> </div>
+	</div>
+	<div class="row">
+		<div class="container">
+			<br/>
+			<div class="row justify-content-center">
+				<p>Enter a burger you want to eat and click the &quot;Add Burger&quot; button</p>
+				<div class="col-12 col-md-10 col-lg-8"> <span id="helpBlock" class="form-text mb-3" style="display:none;">Please enter a burger</span>
+					<form class="card card-sm burger-form mb-5">
+						<div class="card-body row no-gutters align-items-center">
+              <div class="col-auto">
+              <i class="fas fa-hamburger h1 text-body"></i>
+               </div>
+							<div class="col">
+								<input id="burgerName" type="text" class="form-control form-control form-control-lg form-control-borderless" placeholder="Add Burger Here" aria-describedby="helpBlock"> </div>
+							<div class="col-auto">
+								<button class="btn btn-lg btn-dark" type="submit">Add Burger</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-12 col-md-5">{{#each burgers}} {{#unless devoured}}
+					<div class="card bg-light card-body mb-3 bg-faded p-1 well-burger">
+						<div class="d-flex align-items-center">
+							<h6 class="mr-auto mt-2 ml-2">{{id}}. {{burger_name}}</h6>
+							<button class="btn btn-dark btn-devour pull-right" data-id="{{id}}">Devour!</button>
+						</div>
+					</div> {{/unless}} {{/each}} </div>
+				<div class="col-12 col-md-5">{{#each burgers}} {{#if devoured}}
+					<div class="card bg-light card-body mb-3 bg-faded p-1 well-burger">
+						<div class="d-flex align-items-center">
+							<h6 class="mr-auto mt-2 ml-2">{{id}}. {{burger_name}}</h6>
+							<button class="btn btn-link" disabled>Add</button>
+						</div>
+					</div> {{/if}} {{/each}} </div>
+			</div>
+		</div>

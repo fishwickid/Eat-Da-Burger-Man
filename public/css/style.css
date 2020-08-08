@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+body{
+    background-color: #f97142;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.burger-form > button[type=submit]{
+    margin: 15px 0;
+}
+
+.well-burger{
+    border-radius: 6px;
+    border: solid 1px #fff;
+}
+
+.well-burger > p{
+    display: inline-block;
+    margin: 7px 0;
+}
+
+h2{
+    color: #313131;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 250px !important;
+    height: 250px !important;
+}
+
+.btn-dark {
+    background-color: #424242;
+    color: #fff;
+
+}
+.btn-dark:hover {
+    background-color: #313131;
+    color: #fff;
+
+}
+
+.btn.btn-link[disabled] {
+    background-color: #fff;
+    color: #fff;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.bg-light {
+    background-color: #fff !important;
+}
+
+.card {
+    background-color: #fff;
+    border: solid 1px #fff;
+}
+
+.h1 {
+    color:#f97142 !important;
+}
