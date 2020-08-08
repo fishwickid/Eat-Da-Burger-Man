@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/fishwickid/Eat-Da-Burger-Man/issues"
   },
-  "homepage": "https://github.com/fishwickid/Eat-Da-Burger-Man#readme"
+  "homepage": "https://github.com/fishwickid/Eat-Da-Burger-Man#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1"
+  }
 }
